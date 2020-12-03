@@ -19,38 +19,49 @@ def parent(index):
 
 
 class MinHeap:
-    def __init__(self, L: list):
-        '''Create a new MinHeap'''
-        self._tree = []
+    
+    def __init__(self, L=None):
+        '''Create a new MinHeap.
+        This method is complete.'''
+        
+        if not L:        
+            self._data = []
+        else:
+            self._data = L
+            self._min_heapify()
+
         
     def __len__(self):
-        return len(self._tree)
+        '''Return the length of the MinHeap.
+        This method is complete.'''
+        
+        return len(self._data)
+    
+
+    def __str__(self):
+        '''Return a string representation of the heap.
+        This method is complete.'''
+        
+        return str(self._data)
     
     
     def insert(self, v):
         '''Insert v in self. Maintain heap property.'''
         
-        # insert at the end to maintain completeness property
-        # restore heap property
         pass
     
     
     def extract_min(self):
-        '''Remove minimal value in self. Restore heap property.'''
+        '''Remove minimal value in self. Restore heap property.
+        Raise EmptyHeapException if heap is empty.'''
         
-        # swap first and last element
-        # remove last element to maintain completeness property
-        # restore heap property
-        # return min value
         pass
     
     
-    def _percolate_up(self, i):
+    def _percolate_up(self):
         '''Restore heap property of self after 
-        adding new item at index i'''
+        adding new item'''
         
-        # while larger than parent
-        # swap with parent
         pass
     
     
@@ -60,14 +71,14 @@ class MinHeap:
         '''
         
         # while larger than at least one child
-        # swap with smaller child and repeat
-        
+        # swap with smaller child and repeat    
         pass
+    
     
     def _min_heapify(self):
         '''Turn unordered list into min-heap.'''
         
         # for each node in the first half of the list
-        # percolate down to
+        # percolate down
         pass
     
